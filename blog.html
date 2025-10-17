@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="icon"
+          href="{% static 'assets/favicon/favicon.png' %}"
+          type="image/x-icon"
+        />
+        <!-- TAILWIND CSS -->
+        <script src="https://cdn.tailwindcss.com/3.4.0"></script>
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" />
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primaryColor: "#3B82F6",
+                },
+                fontFamily: {
+                  inter: ["Inter", "sans-serif"],
+                },
+              },
+            },
+          };
+        </script>
+    
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <title>Jakarta Smart City</title>
+      </head>
+
+      <body class="antialiased bg-white font-sans text-gray-900">
+
+  <main class="w-full">
+
+    <!-- start header -->
+    <header class="absolute top-0 left-0 w-full z-50 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64">
+
+      <div class="flex flex-wrap items-center justify-between py-6">
+        <div class="w-1/2 md:w-auto">
+          <a href="index.html">
+            <img src="https://smartcity.jakarta.go.id/images/app-logo-white.png" alt="Logo Jakarta Smart City" class="h-16">
+          </a>
+        </div> 
+        <label for="menu-toggle" class="pointer-cursor md:hidden block"><svg class="fill-current text-white"
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <title>menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg></label>
+
+        <input class="hidden" type="checkbox" id="menu-toggle">
+
+        <div class="hidden md:block w-full md:w-auto" id="menu">
+          <nav
+            class="w-full bg-white md:bg-transparent rounded shadow-lg px-6 py-4 mt-4 text-center md:p-0 md:mt-0 md:shadow-none">
+            <ul class="md:flex items-center">
+              <li><a class="py-2 inline-block md:text-gray-500 font-sans" title="Tentang Kami" 
+                  href="https://smartcity.jakarta.go.id/id/persona/">Tentang Kami</a></li> 
+              <li class="md:ml-4"><a class="py-2 inline-block md:text-gray-500 md:px-2 font-sans" title="Produk"
+                  href="https://smartcity.jakarta.go.id/id/jaki/">Produk</a></li>
+              <li class="md:ml-4"><a class="py-2 inline-block md:text-gray-700 md:px-2 font-sans font-medium" title="Blog"
+                  href="blog.html">Blog</a></li>
+              <li class="md:ml-4"><a class="py-2 inline-block md:text-gray-500 md:px-2 font-sans" title="Digitalisasi" 
+                  href="https://smartcity.jakarta.go.id/id/digitalisasi/">Digitalisasi</a></li>
+              <li class="md:ml-4"><a class="py-2 inline-block md:text-gray-500 md:px-2 font-sans" title="Living Lab"
+                  href="https://smartcity.jakarta.go.id/id/living-lab/">Living Lab</a></li>
+              <li class="md:ml-4"><a class="py-2 inline-block md:text-gray-500 md:px-2 font-sans" title="Karir"
+                  href="https://smartcity.jakarta.go.id/id/karir/">Karir</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start hero -->
+    <div class="bg-black">
+      <section class="cover bg-blue-teal-gradient relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex
+      items-center min-h-screen">
+      <a href=""> 
+        <div class="h-auto w-auto absolute top-0 left-0 z-0">
+          <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe2c42KMUbTAb8UQ_NwvwBiiE6gyPl5sxNj8LVW-PrDIXKlUd6JOXULfK5cbs6U6MzRnv_KwkF0NPRfovUECSW8BiOqM2Zz-MQnRpyRYcICYHs_7CrUKiPjqhE37c3olBdkGqT-ww?key=iYIBWr2YzbWrTX6FFM5FtA" alt="Jakarta Fair Kemayoran sebagai Wajah Smart Economy" class="object-cover opacity-30">
+        </div>
+      </a>
+      <div class="lg:w-auto xl:w-auto relative z-10 h-100 lg:mt-44">
+          <div>
+            <h1 class="text-white text-5xl md:text-6xl xl:text-7xl font-semibold leading-tight" alt="Blog Berita Terkini">Blog Berita Terkini</h1>
+            <p class="text-white max-w-4xl text-xl font-semibold mx-auto mt-4">Blog ini menyajikan informasi terkini dan terpercaya seputar perkembangan pemerintahan di DKI Jakarta. Setiap berita disajikan dengan bahasa yang lugas, ringkas, dan akurat, agar masyarakat mudah memahami arah kebijakan dan dampaknya terhadap kehidupan sehari-hari.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- end hero -->
+
+    <!-- Blog Section -->
+    <div class="bg-blue-50">
+      <section class="mx-auto max-w-screen-xl px-4 py-14 sm:px-6 lg:px-8">
+        <a href="https://smartcity.jakarta.go.id/id/blog/" class="text-2xl font-bold sm:text-3xl text-gray-900">Artikel Berita</a>
+        <div class="grid md:grid-cols-3 mt-6 gap-6">
+          
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/5d660dcc-d727-4014-a6c9-2c3b3dfb4ccc/DSC00355_11zon.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Meriahkan Ulang Tahun Ke-498 Jakarta
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Sebagai informasi nih, Smartcitizen, World Cities Culture Forum (WCCF) itu adalah jaringan global yang menghimpun pemimpin dari lebih 45 kota kreatif di enam benua. Forum ini memiliki  fungsi sebagai wadah untuk bertukar pengetahuan, kebijakan, dan riset guna memperkuat peran budaya sebagai fondasi pembangunan berkelanjutan.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+          
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/950559b0-4e85-4eb9-a85b-051c0ce4fd05/image.png"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Rute Transjabodetabek Per Juni 2025
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Salah satu titik nadi transportasi Jakarta, Halte Transjakarta Senen Sentral, kini hadir dengan wajah dan nama baru, Halte Jaga Jakarta. Peresmian halte yang berlokasi di kawasan strategis Senen, Jakarta Pusat ini, dilakukan oleh Gubernur Pramono Anung pada Senin, 8 September 2025 lalu. Perubahan nama bukan sekadar simbol saja, melainkan pengingat agar peristiwa yang sempat terjadi lokasi tersebut tidak terulang lagi.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/6bbb1a69-4e3e-41e7-a07c-31461d7cdbd8/Akses%20Cepat%20Layanan%20dengan%20Banner%20dan%20Fitur%20Pintasan%20di%20JAKI.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Mengupas fitur Baru di Aplikasi Jaki
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Smartcitizen, sebagai pengguna setia aplikasi JAKI, kamu pasti tahu kalau aplikasi JAKI menghadirkan beragam fitur yang memudahkan hidup warga Jakarta. Nah, sekarang ada tambahan pintasan baru di JAKI dalam bentuk banner, yang bikin akses ke layanan publik dari segala sektor jadi makin cepat dan praktis. Yuk, simak satu per satu di sini. 
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/a6de4072-cf2a-48c0-b041-7947e373fe22/Serah%20Terima%20Ambulans%20Listrik%20Pertama%20DKI%20Jakarta.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Ambulans Listrik Pertama di Jakarta, Siap Melayani Warga
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Jakarta punya ambulans listrik pertama! Ambulans ini hibah dari Yayasan Life After Mine (LINE) untuk mendukung layanan kesehatan yang lebih hijau.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/75c16a7b-2f5f-45db-8494-e72bdac568c9/8f388b4971ead120528a554a95e38b82_11zon.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Gampang ke Stasiun Cikini, Sekarang Ada Pelican Crossing!
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Smartcitizen, kamu pernah mendengar istilah “pelican crossing”? Istilah tersebut sebenarnya tidak berhubungan sama sekali dengan burung pelikan. Ini berasal dari akronim pelicon, bentuk singkatan dari pedestrian light controlled crossing. 
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+          
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/43ee0c71-b3e7-471d-8672-fd2f0a63ed04/Berwisata%20ke%20Ancol%20Naik%20Transjakarta.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Jalan-jalan ke Ancol? Yuk, Cek Rute Transjakarta 1W
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Jakarta selalu punya cara untuk memanjakan warganya yang ingin berlibur tanpa harus pergi jauh. Salah satu destinasi favorit warga Jakarta adalah Taman Impian Jaya Ancol. Dari pantai, Dunia Fantasi, hingga Sea World, kawasan wisata ini memang paket lengkap untuk keluarga maupun anak muda.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/881aa1cc-44c6-44e8-ac3f-68d5f24c5a80/Foto%20Story%20CRM%20Sampah%20di%20Pintu%20Air%20Kali%20Buaran-05_11zon.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Intip Suksesnya Pengolahan Sampah Negara Lain
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Pernahkah kamu terpikir kalau sampah sehari-hari di rumah bisa berubah jadi sesuatu yang bermanfaat? Coba bayangkan, botol plastik bekas minuman yang kita buang ternyata bisa kembali menjadi bahan baku industri. 
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/ac9a732c-c4f1-4a5b-8c45-edef364884d0/Langkah-langkah%20Pemprov%20DKI%20JagaJakarta.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Langkah-langkah Pemprov DKI Jakarta #JagaJakarta
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Usai aksi penyampaian pendapat yang mengundang massa besar pada 28–29 Agustus 2025, Jakarta sempat dipenuhi sisa-sisa keramaian. Pecahan kaca, coretan vandalisme, dan kerusakan di berbagai fasilitas umum.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/05e86394-53a2-4a1f-ac40-dbf73560a162/WhatsApp%20Image%202025-10-01%20at%2013.05.58_b817041d.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Jakarta Smart City Hadir di Global Digital Trade Expo 2025
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Jakarta Smart City (JSC) kembali dipercaya untuk mewakili Jakarta di panggung internasional. Kali ini, JSC hadir dalam Global Digital Trade Expo (GDTE) 2025 yang berlangsung pada 25–27 September di Hangzhou Grand Convention and Exhibition Area, Tiongkok. 
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+          
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/51637ae5-d938-4edd-86bb-6e836670a47b/5%20Upaya%20Pemprov%20Atasi%20Kepadatan%20TB%20Simatupang.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    5 Upaya Pemprov Atasi Kepadatan TB Simatupang
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Bagi banyak warga, melintas di kawasan TB Simatupang setiap hari bukanlah perkara mudah. Lalu lintas yang padat, ditambah pengerjaan proyek galian di sejumlah titik sepanjang Jalan TB Simatupang, sering kali membuat perjalanan terasa lebih lama dan melelahkan, terutama di jam-jam sibuk.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/05069c4d-c0ea-486d-a66b-614d03facd99/WhatsApp%20Image%202025-08-28%20at%2009.28.19_4d70afc1.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Tetap Aman, Yuk, Jaga Jakarta Bareng JAKI!
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Jakarta adalah “rumah” bersama bagi jutaan orang dengan latar belakang dan aspirasi yang beragam. Kota ini selalu menjadi tempat bertemunya berbagai suara, termasuk saat Smartcitizen memilih untuk menyuarakan pendapat. Kita memiliki ruang tersebut karena aspirasi warga adalah bagian penting dari dinamika.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+
+          <article
+              class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs"
+            >
+              <img
+                alt=""
+                src="https://smartcity.jakarta.go.id/uploads/artikel-cover-image/e520f316-3104-4c85-a224-70ad54a444ea/1508%20-%20Foto%20-%20Artikel%20Jakarta%20Dahulu%20dan%20Sekarang-%20Sejarah%20Lewat%20Foto_11zon.jpe"
+                class="h-56 w-full object-cover"
+              />
+
+              <div class="p-4 sm:p-6">
+                <a href="#">
+                  <h3 class="text-lg font-medium text-gray-900">
+                   Jakarta Dahulu dan Sekarang: Sejarah Lewat Foto
+                  </h3>
+                </a>
+
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                  Setiap perayaan kemerdekaan bukan hanya mengingatkan kita pada perjuangan masa lalu, tetapi juga mengajak kita menengok sejauh mana negeri ini, termasuk Jakarta, telah melangkah. Jakarta adalah saksi hidup perubahan zaman: dari jalan-jalan era 1960-an, gedung-gedung tua yang berdiri anggun, hingga wajah modern dengan transportasi terintegrasi dan ruang publik yang nyaman.
+                </p>
+
+                <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+                  Lihat Berita Selengkapnya
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+          </article>
+        </div>
+        
+        <ul class="flex justify-center gap-1 text-gray-900 mt-6">
+          <li>
+            <a
+              href="#"
+              class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+              aria-label="Halaman Sebelumnya"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <li
+              class="block size-8 rounded border border-blue-900 bg-blue-900 text-center text-sm/8 font-medium text-white"
+            >
+              1
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50"
+            >
+              2
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50"
+            >
+              3
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50"
+            >
+              4
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+              aria-label="Halaman Selanjutnya"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- end blog -->
+
+    <!-- start footer -->
+    <footer class="relative bg-gray-900 text-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-24 py-12 lg:py-24">
+      <div class="flex grid-cols-2">
+        <div class="flex grid-cols-2">
+          <div class="w-full lg:w-4/4 lg:mx-4">
+            <img src="https://smartcity.jakarta.go.id/images/app-logo-white.png"  class="pr-4" alt="logo jakarta smart city">
+          </div>
+          <div class="lg:w-1/6 lg:pr-24">
+            <img src="https://smartcity.jakarta.go.id/_next/image/?url=%2Fimages%2Fpemprov-dki.png&w=1920&q=75"  class="lg:max-w-4xl" alt="logo DKI Jakarta">
+          </div>
+        </div>
+
+        <div class="w-full lg:mt-0 lg:mx-4 pl-20">
+          <div class="mb-16">
+            <h1 class="text-2xl font-bold">
+             Alamat Kantor
+            </h1>
+            <p class="mt-2">Gedung Balai Kota DKI Jakarta Jl Medan Merdeka Selatan, No. 8-9, RT 11/RW 2, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10110</p>
+          </div>
+          <div class="grid grid-cols-2">
+            <div>
+              <h5 class="uppercase tracking-wider font-semibold">Temukan kami di sosial media</h5>
+              <ul class="mt-4 flex">
+                <li>
+                  <a href="https://web.facebook.com/JSCLab?_rdc=1&_rdr#" target="_blank" title="facebook jakarta smart city">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                      <path
+                        d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592	c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20	c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z" />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="ml-6">
+                  <a href="https://x.com/JSCLab" target="_blank" title="twitter jakarta smart city">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                      <path
+                        d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809	c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793	c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05	c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032	c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028	c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22	c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z" />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="ml-6">
+                  <a href="https://www.instagram.com/jsclab/" target="_blank" title="instagram jakarta smart city">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                      <path
+                        d="M20.947,8.305c-0.011-0.757-0.151-1.508-0.419-2.216c-0.469-1.209-1.424-2.165-2.633-2.633 c-0.699-0.263-1.438-0.404-2.186-0.42C14.747,2.993,14.442,2.981,12,2.981s-2.755,0-3.71,0.055 c-0.747,0.016-1.486,0.157-2.185,0.42C4.896,3.924,3.94,4.88,3.472,6.089C3.209,6.788,3.067,7.527,3.053,8.274 c-0.043,0.963-0.056,1.268-0.056,3.71s0,2.754,0.056,3.71c0.015,0.748,0.156,1.486,0.419,2.187 c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45c0.963,0.043,1.268,0.056,3.71,0.056s2.755,0,3.71-0.056 c0.747-0.015,1.486-0.156,2.186-0.419c1.209-0.469,2.164-1.425,2.633-2.633c0.263-0.7,0.404-1.438,0.419-2.187 c0.043-0.962,0.056-1.267,0.056-3.71C21.003,9.572,21.003,9.262,20.947,8.305z M11.994,16.602c-2.554,0-4.623-2.069-4.623-4.623 s2.069-4.623,4.623-4.623c2.552,0,4.623,2.069,4.623,4.623S14.546,16.602,11.994,16.602z M16.801,8.263 c-0.597,0-1.078-0.482-1.078-1.078s0.481-1.078,1.078-1.078c0.595,0,1.077,0.482,1.077,1.078S17.396,8.263,16.801,8.263z" />
+                      <circle cx="11.994" cy="11.979" r="3.003" /></svg>
+                  </a>
+                </li>
+
+                <li class="ml-6">
+                  <a href="https://www.youtube.com/channel/UCwBHhUax4ztQIsHpSJR_Cqw/featured?themeRefresh=1" target="_blank" title="youtube jakarta smart city">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                      <path
+                        d="M21.593,7.203c-0.23-0.858-0.905-1.535-1.762-1.766C18.265,5.007,12,5,12,5S5.736,4.993,4.169,5.404	c-0.84,0.229-1.534,0.921-1.766,1.778c-0.413,1.566-0.417,4.814-0.417,4.814s-0.004,3.264,0.406,4.814	c0.23,0.857,0.905,1.534,1.763,1.765c1.582,0.43,7.83,0.437,7.83,0.437s6.265,0.007,7.831-0.403c0.856-0.23,1.534-0.906,1.767-1.763	C21.997,15.281,22,12.034,22,12.034S22.02,8.769,21.593,7.203z M9.996,15.005l0.005-6l5.207,3.005L9.996,15.005z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="uppercase tracking-wider font-semibold">Unduh JAKI</h5>
+              <ul class="mt-4 flex gap-2">
+                <li>
+                  <a href="https://web.facebook.com/JSCLab?_rdc=1&_rdr#" target="_blank" title="Unduh Jaki di App store">
+                    <img src="https://smartcity.jakarta.go.id/_next/image/?url=%2Fimages%2Fapp-store.png&w=1920&q=75" width="140" height="full" alt="Unduh Jaki di App store">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://web.facebook.com/JSCLab?_rdc=1&_rdr#" target="_blank" title="Unduh Jaki di play store">
+                    <img src="https://smartcity.jakarta.go.id/_next/image/?url=%2Fimages%2Fgoogle-play.png&w=1920&q=75" width="140" height="full" alt="Unduh Jaki di play store">
+                  </a>
+                </li>      
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="p-2">
+      <p class="text-center">Hak cipta © 2021 JSC. Seluruh hak cipta dilindungi undang-undang dan terdaftar pada Direktorat Jendral Kekayaan Intelektual Republik Indonesia.</p>
+    </div>
+    <!-- end footer -->
+
+  </main>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131505823-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131505823-4');
+  </script>
+
+</body>
+</html>
